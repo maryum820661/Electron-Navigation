@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html> 
+  <head> <meta charset="UTF-8"> <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --> <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+   <title>Electron App</title>
+    <link rel="stylesheet" href="node_modules/electron-navigation/themes/chrome-like.css">
+   </head>
+    <body> 
+      <div id="nav-body-ctrls"></div>
+      <div id="nav-body-tabs"></div> 
+      <div id="nav-body-views"></div> <!-- You can also require other files to run in this process --> 
+      <script> 
+     const enav = new (require('electron-navigation'))(); 
+      let google = enav.newTab('https://www.google.com/search?q=wordpress&oq=word&aqs=chrome.4.69i57j69i59l2j0l2j69i60l3.4447j0j7&sourceid=chrome&ie=UTF-8');
+      let tab1= enav.newTab('https://wordpress.com/create/?currency=USD&utm_source=google&utm_campaign=google_wpcom_search_brand_desktop_row_en&utm_medium=paid_search&keyword=wordpress&creative=280808588580&campaignid=655562327&adgroupid=55312602867&matchtype=e&device=c&network=g&targetid=kwd-313411415&gclid=CjwKCAiAnfjyBRBxEiwA-EECLK9lWMus1m1k94sjZ-7RfRB-pdMhTzRo7tkGeBpcNnANii54WirmNxoCh-UQAvD_BwE&gclsrc=aw.ds');      // let google = enav.newTab('https://www.google.com/search?q=wordpress&oq=word&aqs=chrome.4.69i57j69i59l2j0l2j69i60l3.4447j0j7&sourceid=chrome&ie=UTF-8')
+      let tab2= enav.newTab('https://wordpress.com/?aff=27964');     
+      let tab3= enav.newTab('https://www.wp-clusters.com/?gclid=CjwKCAiAnfjyBRBxEiwA-EECLDThr_Si56UImt5IqiGbkAyAkkbHuncWQ-d94PFzRxjnYWuqA3Q6zRoCLx4QAvD_BwE'); 
+      </script>
+  </body> 
+  </html>
+
